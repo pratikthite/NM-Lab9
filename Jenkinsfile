@@ -12,7 +12,7 @@ pipeline {
             steps {
                 sh 'echo "Checking code for violations"'
                 sh '''
-                if pylint netman_netconf_obj2.py | grep / | grep -o "^[^.]*" | awk -F" " "$7 > 5" &> /dev/null; then
+                if pylint netman_netconf_obj2.py | grep / | grep -o "^[^.]*" | awk -F" " \'$7 > 5\' &> /dev/null; then
                   echo "The code rate was rated above 5"
                 else
                   echo "The code rate was 5 or below. Pipeline failed. Check the code to match the style-guide"
