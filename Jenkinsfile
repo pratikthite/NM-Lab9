@@ -8,7 +8,7 @@ pipeline {
                 sh 'pip list | grep -E 'ncclient|pandas|ipaddress|netaddr|prettytable|pylint; pip install ncclient pandas; pip install ipaddress netaddr; pip install prettytable pylint'
             }
         }
-        stage('Fix Violation') {
+        stage('Fix Violations') {
             steps {
                 sh 'echo "Checking code for violations"'
                 sh '''
