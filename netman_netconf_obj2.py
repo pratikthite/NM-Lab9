@@ -4,7 +4,7 @@ try:
     from ncclient import manager
     from prettytable import PrettyTable
     from netaddr import IPAddress
-    import pandas as pd
+    #import pandas as pd
     import ipaddress
     import os
     import sys
