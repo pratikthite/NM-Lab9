@@ -1,13 +1,12 @@
 from __future__ import print_function
-import sys
 try:
-    #from ncclient import manager
-    #from prettytable import PrettyTable
-    #from netaddr import IPAddress
+    from ncclient import manager
+    from prettytable import PrettyTable
+    from netaddr import IPAddress
     import pandas as pd
-    #import ipaddress
-    #import os
-    #import sys
+    import ipaddress
+    import os
+    import sys
 except Exception:
     print('Install all the necessary module')
     sys.exit()
