@@ -1,4 +1,6 @@
 from __future__ import print_function
+from ncclient import manager
+import sys
 try:
     from ncclient import manager
     from prettytable import PrettyTable
@@ -6,7 +8,6 @@ try:
     import pandas as pd
     import ipaddress
     import os
-    import sys
 except Exception:
     print('Install all the necessary module')
     sys.exit()
