@@ -8,15 +8,15 @@ pipeline {
                 sh '''
                 python3 -m pip install --upgrade pip
                 python3 -m pip install ncclient
-                python3 -m pip install pandas;
+                python3 -m pip install pandas
                 python3 -m pip install ipaddress
-                python3 -m pip install netaddr;
+                python3 -m pip install netaddr
                 python3 -m pip install prettytable
                 python3 -m pip install pylint
                 '''
             }
         }
-        stage('Fix Violation') {
+        stage('Fix Violations') {
             steps {
                 sh 'echo "Checking code for violations"'
                 sh '''
@@ -31,7 +31,7 @@ pipeline {
         }
         stage('Execute Python Script') {
             steps {
-                sh '/usr/bin/python3 netman_netconf_obj2.py'
+                sh 'python3 netman_netconf_obj2.py'
             }
         }
         stage('Unit Testing') {
