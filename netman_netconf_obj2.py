@@ -8,7 +8,7 @@ try:
     import os
     import sys
 except Exception:
-    print('Install all the necessary modules')
+    print('Install all the necessary module')
     sys.exit()
 
 if __name__ == "__main__":
