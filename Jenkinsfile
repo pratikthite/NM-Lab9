@@ -5,7 +5,14 @@ pipeline {
         stage('Install Packages') {
             steps {
                 sh 'echo "Installing Packages"'
-                sh 'pip list | grep -E "ncclient|pandas|ipaddress|netaddr|prettytable|pylint"; pip install ncclient pandas; pip install ipaddress netaddr; pip install prettytable pylint'
+                sh '''
+                python3 -m pip install ncclient
+                python3 -m pip install pandas;
+                python3 -m pip install ipaddress
+                python3 -m pip install netaddr;
+                python3 -m pip install prettytable
+                python3 -m pip install pylint
+                '''
             }
         }
         stage('Fix Violation') {
