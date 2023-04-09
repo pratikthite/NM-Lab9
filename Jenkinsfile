@@ -23,7 +23,7 @@ pipeline {
         }
         stage('Execute Python Script') {
             steps {
-                sh 'python3 netman_netconf_obj2.py'
+                sh '/usr/bin/python3 netman_netconf_obj2.py'
             }
         }
         stage('Unit Testing') {
