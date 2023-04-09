@@ -38,6 +38,7 @@ pipeline {
         stage('Unit Testing') {
             steps {
                 sh 'whereis python3'
+                sh 'which python3'
                 sh '/usr/bin/python3.10 stg4_unit.py'
             }
         }
