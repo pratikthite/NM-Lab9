@@ -13,7 +13,8 @@ pipeline {
                 python3 -m pip install netaddr
                 python3 -m pip install prettytable
                 python3 -m pip install pylint
-                python3 -m pip install netmiko
+                pip3 uninstall netmiko
+                pip3 install netmiko==3.0.0
                 '''
             }
         }
