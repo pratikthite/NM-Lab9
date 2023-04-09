@@ -6,6 +6,7 @@ pipeline {
             steps {
                 sh 'echo "Installing Packages"'
                 sh '''
+                python3 -m pip install --upgrade pip
                 python3 -m pip install ncclient
                 python3 -m pip install pandas;
                 python3 -m pip install ipaddress
