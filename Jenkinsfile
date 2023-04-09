@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Install Packages') {
+        stage('Install Package') {
             steps {
                 sh 'echo "Installing Packages"'
                 sh '''
