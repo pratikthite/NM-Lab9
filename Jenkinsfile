@@ -36,7 +36,7 @@ pipeline {
         }
         stage('Unit Testing') {
             steps {
-                echo 'Hello Brother'
+                sh 'python3 stg4_unit.py'
             }
         }
     }

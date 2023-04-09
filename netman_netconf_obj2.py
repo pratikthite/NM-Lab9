@@ -1,6 +1,4 @@
 from __future__ import print_function
-#import sys
-#from ncclient import manager
 try:
     from ncclient import manager
     from prettytable import PrettyTable
