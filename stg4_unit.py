@@ -37,8 +37,9 @@ def r1_area(ip):
             print("Successfully logged in R1")
             d = konnect.send_command("sh ip protocols | inc stub")
             a = d.split(" ")[7]
+            print(a)
             areas = a.strip(".")
-            print(areas)
+            #print(areas)
             if areas == '1':
                 print("R1 is configured in single area")
                 return True
