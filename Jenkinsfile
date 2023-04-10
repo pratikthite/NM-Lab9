@@ -21,7 +21,7 @@ pipeline {
             steps {
                 sh 'echo "Checking code for violations"'
                 sh '''
-                m=$(pylint netman_netconf_obj2.py | grep rated | awk -F"." \'{print $1}\' | awk -F" " \'{print $7}\')
+                m=$(python3 -m pylint netman_netconf_obj2.py | grep rated | awk -F"." \'{print $1}\' | awk -F" " \'{print $7}\')
                 if [ "$m" -gt 5 ]; then
                   echo "The code rate was rated above 5"
                 else
