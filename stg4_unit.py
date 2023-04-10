@@ -36,11 +36,12 @@ def r1_area(ip):
     with ConnectHandler(**r1) as konnect:
             print("Successfully logged in R1")
             d = konnect.send_command("sh ip protocols | inc stub")
-            a = d.split(" ")[9]
+            a = d.split(".")[0].split(" ")[-1]
             print(a)
-            areas = a.strip(".")
+            print(type(a))
+            #areas = a.strip(".")
             #print(areas)
-            if areas == '1':
+            if a == '1':
                 print("R1 is configured in single area")
                 return True
             else:
