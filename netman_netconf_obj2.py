@@ -11,6 +11,11 @@ except Exception:
     print('Install all the necessary module')
     sys.exit()
 
+
+
+
+
+
 if __name__ == "__main__":
     TABLE = PrettyTable(['Router', 'Hostname', 'Loopback 99 IP', 'OSPF area', 'Advertised OSPF Networks'])
     file = 'info.csv'
@@ -101,6 +106,9 @@ if __name__ == "__main__":
         ospf_networks = split3[9] + '/' + lo_ip_prefix, split3[14] + '/' + mgm_ip_prefix
 
         TABLE.add_row((ROUTERS[i], hostname, lo_ip_mask, ospf_area, ospf_networks))
+
+
+        
 
     print('\n------------------Displaying the fetched information------------------\n')
     print(TABLE)
