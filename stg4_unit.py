@@ -68,7 +68,7 @@ def pingr5_lb(ip):
                 print("Ping to R5s Loopback99 was successful from R2s Loopback99")
                 return True
             else:
-                print("Ping to R5s Loopback99 was unsuccessful from R2s Loopback99")
+                print("Ping to R5s Loopback99 was unsuccessful from R2 Loopback99")
                 return False
 
 class TestClass(unittest.TestCase):
