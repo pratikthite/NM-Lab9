@@ -19,7 +19,6 @@ pipeline {
         }
         stage('Fix Violation') {
             steps {
-                sh 'pylint netman_netconf_obj2'
                 sh 'echo "Checking code for violations"'
                 sh '''
                 if pylint netman_netconf_obj2.py | grep / | grep -o "^[^.]*" | awk -F" " \'$7 > 5\' &> /dev/null; then

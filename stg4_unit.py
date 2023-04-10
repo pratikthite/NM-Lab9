@@ -38,7 +38,7 @@ def r1_area(ip):
             d = konnect.send_command("sh ip protocols | inc stub")
             a = d.split(" ")[7]
             areas = a.strip(".")
-            #print(areas)
+            print(areas)
             if areas == '1':
                 print("R1 is configured in single area")
                 return True
@@ -68,7 +68,7 @@ def pingr5_lb(ip):
                 print("Ping to R5s Loopback99 was successful from R2s Loopback99")
                 return True
             else:
-                print("Ping to R5s Loopback99 was unsuccessful from R2 Loopback99")
+                print("Ping to R5s Loopback99 was unsuccessful from R2s Loopback99")
                 return False
 
 class TestClass(unittest.TestCase):
