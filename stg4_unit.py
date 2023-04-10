@@ -36,7 +36,7 @@ def r1_area(ip):
     with ConnectHandler(**r1) as konnect:
             print("Successfully logged in R1")
             d = konnect.send_command("sh ip protocols | inc stub")
-            a = d.split(" ")[7]
+            a = d.split(" ")[9]
             print(a)
             areas = a.strip(".")
             #print(areas)
