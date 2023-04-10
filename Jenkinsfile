@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Install Packages') {
             steps {
-                sh 'echo "Installing Package"'
+                sh 'echo "Installing Packages"'
                 sh '''
                 python3 -m pip install --upgrade pip
                 python3 -m pip install ncclient
