@@ -17,7 +17,7 @@ pipeline {
                 '''
             }
         }
-        stage('Fix Violation') {
+        stage('Fix Violations') {
             steps {
                 sh 'echo "Checking code for violations"'
                 sh '''

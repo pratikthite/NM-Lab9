@@ -64,7 +64,7 @@ def pingr5_lb(ip):
             res2 = konnect.send_command("ping "+lb5+" source loopback99")
             a1 = res2.split("\n")[4].split(" ")[3]
             if a1 != '0':
-                print("Ping to R5s Loopback99 was successful from R2s Loopback99")
+                print("Ping to R5s Loopback99 was successful from R2 Loopback99")
                 return True
             else:
                 print("Ping to R5s Loopback99 was unsuccessful from R2s Loopback99")
